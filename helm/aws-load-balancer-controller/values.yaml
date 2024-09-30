@@ -8,7 +8,7 @@ revisionHistoryLimit: 10
 
 image:
   repository: public.ecr.aws/eks/aws-load-balancer-controller
-  tag: v2.7.0
+  tag: v2.9.0
   pullPolicy: IfNotPresent
 
 runtimeClassName: ""
@@ -200,6 +200,10 @@ logLevel:
 
 # The address the metric endpoint binds to. (default ":8080")
 metricsBindAddr: ""
+
+webhookConfig:
+  # disableIngressValidation disables the validation of resources of kind Ingress, false by default
+  disableIngressValidation:
 
 # The TCP port the Webhook server binds to. (default 9443)
 webhookBindPort:
